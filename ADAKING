@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int R,C,K,i,j,k,ctr,T;
+    scanf("%i",&T);
+    for(k=0;k<T;k++)
+    {
+        ctr=0;
+        scanf("%i %i %i",&R,&C,&K);
+        for (i=1;i<9;i++)
+            for (j=1;j<9;j++)
+                if(pow(i-R,2)<=pow(K,2)&&pow(j-C,2)<=pow(K,2))
+                    ctr++;
+        printf("%i\n",ctr);
+    }
+    return 0;
+}
